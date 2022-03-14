@@ -26,7 +26,13 @@ const QuoteList = (props) => {
   const sortedQuotes = sortQuotes(props.quotes, isSortingAscending);
 
   const sortingHandler = () => {
-    history.push("/quotes?sort=" + (isSortingAscending ? "desc" : "asc"));
+    // make long url more readable than simply construct it like below
+    history.push({
+      pathname: location.pathname,
+      search: `?sort=${isSortingAscending ? "desc" : "asc"}`,
+    });
+
+    // history.push("/quotes?sort=" + (isSortingAscending ? "desc" : "asc"));
   };
 
   return (
