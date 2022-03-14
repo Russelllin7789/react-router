@@ -16,16 +16,6 @@ const QuoteList = (props) => {
         return quoteA.id < quoteB.id ? 1 : -1;
       }
     });
-    // if (ascending) {
-    //   return quotes.sort((a, b) => {
-    //     console.log(a, b);
-    //     return a.id - b.id;
-    //   });
-    // } else {
-    //   return quotes.sort((a, b) => {
-    //     return b.id - a.id;
-    //   });
-    // }
   };
 
   // URLSearchParams is native JS method
